@@ -83,7 +83,7 @@ function process() {
 
     runInterval = setInterval(() => {
         metaLookInstance.run();
-    }, 15 * 1000);
+    }, 10 * 1000);
 }
 
 const checkDocumentReadyInterval = setInterval(  () => {

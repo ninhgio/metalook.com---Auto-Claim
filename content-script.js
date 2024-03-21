@@ -65,14 +65,18 @@ const metaLookInstance = {
         // click view article
         metaLookInstance.log(`[Addon]`, `Click vào bài viết "${title}"!`);
         $(article).find('div:first').click();
-        // find claim button
-        const claimButton = $('.detail-trending .claim-button');
-        if ($(claimButton).attr('disabled') !== undefined) {
-            metaLookInstance.log(`[Addon]`, `Đã claim bài này rồi!`);
-        } else {
-            $(claimButton).find('img').click();
-        }
-        reloadArticle = true;
+
+        setTimeout(() => {
+            // find claim button
+            if ($('.detail-trending .claim-button').attr('disabled') === 'disabled') {
+                metaLookInstance.log(`[Addon]`, `Đã claim bài này rồi!`);
+            } else {
+                $('.detail-trending .claim-button img')[0].click();
+                metaLookInstance.log(`[Addon]`, `Claim bài viết ${title}!`);
+
+            }
+            reloadArticle = true;
+        }, 1000);
     }
 }
 

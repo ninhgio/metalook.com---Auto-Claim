@@ -41,7 +41,7 @@ const metaLookInstance = {
             const random = metaLookInstance.random(0, count - 1);
 
             $('.flex-col.overflow-y-auto').animate({
-                scrollTop: random * 1000
+                scrollTop: $('.flex-col.overflow-y-auto .w-full.flex-1').height()
             }, 1000);
 
             return articles[random];
@@ -96,8 +96,8 @@ const checkDocumentReadyInterval = setInterval(  () => {
     // do your work
     process();
 
+    metaLookInstance.article.filterAll();
     setInterval(() => {
         metaLookInstance.article.filterAll();
-    }, 60 * 1000)
-    //setInterval(utils.getSelectedEvent, 200);
+    }, 60 * 1000);
 }, 100);

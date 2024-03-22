@@ -104,4 +104,8 @@ const checkDocumentReadyInterval = setInterval(  () => {
     setInterval(() => {
         metaLookInstance.article.filterAll();
     }, 60 * 1000);
+
+    setInterval(() => {
+        window.location.reload();
+    }, 2 * 60 * 60 * 1000);
 }, 100);

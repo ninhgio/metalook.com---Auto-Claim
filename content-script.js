@@ -112,5 +112,5 @@ const checkDocumentReadyInterval = setInterval(  () => {
 
     setInterval(() => {
         window.location.reload();
-    }, 2 * 60 * 60 * 1000);
+    }, 30 * 60 * 1000);
 }, 100);
